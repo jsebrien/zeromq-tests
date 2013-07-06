@@ -77,20 +77,8 @@
 					</descriptors>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>exec-maven-plugin</artifactId>
-				<configuration>
-					<executable>java</executable>
-					<arguments>
-						<argument>-Djava.library.path=/usr/local/lib</argument>
-					</arguments>
-				</configuration>
-			</plugin>
 		</plugins>
 	</build>
-
-
 	<dependencies>
 		<dependency>
 			<groupId>log4j</groupId>
