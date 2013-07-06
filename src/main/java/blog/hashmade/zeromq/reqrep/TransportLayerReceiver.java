@@ -36,10 +36,10 @@ public class TransportLayerReceiver {
     this.url = url;
     this.listenersBuilder = listenersBuilder;
     this.context = ZMQ.context(1);
-    this.socketLocal = new TransportLayerSocketLocal(ZMQ.XREP, this.context);
-    this.xReqSocketLocal = new TransportLayerSocketLocal(ZMQ.XREQ, this.context);
+    this.socketLocal = new TransportLayerSocketLocal(ZMQ.ROUTER, this.context);
+    this.xReqSocketLocal = new TransportLayerSocketLocal(ZMQ.DEALER, this.context);
     this.repSocketLocal = new TransportLayerSocketLocal(ZMQ.REP, this.context);
-    this.executor = ScheduledThreadFactory.createScheduledExecutor(1, "AbstractTransportLayerReceiver", true);
+    this.executor = ScheduledThreadFactory.createScheduledExecutor(1, "TransportLayerReceiver", true);
   }
 
   public boolean start() {

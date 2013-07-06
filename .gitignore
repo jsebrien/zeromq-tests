@@ -10,3 +10,4 @@ target
 garbage
 .classpath
 .project
+assembly*.xml
